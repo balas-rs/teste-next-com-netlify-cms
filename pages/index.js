@@ -1,19 +1,16 @@
 import Head from 'next/head'
 import Image from 'next/image'
+import { useState } from 'react';
 import styles from '../styles/Home.module.css'
 
+
 export default function Home() {
-  /*
-  if (window.netlifyIdentity) {
-    window.netlifyIdentity.on("init", user => {
-      if (!user) {
-        window.netlifyIdentity.on("login", () => {
-          document.location.href = "/admin/";
-        })
-      }
-    })
-  }
-  */
+
+  const [ post, setPost ] = useState({})
+
+  
+
+
   return (
     <div>
       Hello World!

@@ -14,6 +14,8 @@ collections:
    folder: "/public/posts"
    create: true
    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+   format: "json"
+   extension: "json"
    fields:
     - {label: "Nome", name: "projectname", widget: "string"}
     - {label: "Texto", name: "texto", widget: "markdown"}
