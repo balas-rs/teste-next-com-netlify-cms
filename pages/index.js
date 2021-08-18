@@ -3,6 +3,7 @@ import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 
 export default function Home() {
+  /*
   if (window.netlifyIdentity) {
     window.netlifyIdentity.on("init", user => {
       if (!user) {
@@ -12,6 +13,7 @@ export default function Home() {
       }
     })
   }
+  */
   return (
     <div>
       Hello World!
