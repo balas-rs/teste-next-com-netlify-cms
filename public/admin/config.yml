@@ -9,20 +9,23 @@ publish_mode: editorial_workflow
 media_folder: "/public/images" # Media files will be stored in the repo under images
 
 collections:
+ - name: "projetos"
+   label: "Projetos"
+   folder: "/public/posts/projetos"
+   create: true
+   slug: "{{year}}-{{month}}-{{day}}-{{titulo}}"
+   format: "json"
+   extension: "json"
+   fields:
+    - {label: "Titulo", name: "titulo", widget: "string"}
+    - {label: "Texto", name: "texto", widget: "markdown"}
  - name: "empreendimentos"
    label: "Empreendimentos"
-   files:
-    - label: "Empreendimentos"
-      name: "empreendimentos"
-      file: "/public/posts/empreendimentos.json"
-      create: true
-      fields:
-        - {label: "Titulo", name: "titulo", widget: "string"}
-        - {label: "Texto", name: "texto", widget: "markdown"}
-    - label: "Projetos"
-      name: "projetos"
-      file: "/public/posts/projetos.json"
-      create: true
-      fields:
-        - {label: "Titulo", name: "titulo", widget: "string"}
-        - {label: "Texto", name: "texto", widget: "markdown"}
+   folder: "/public/posts/empreendimentos"
+   create: true
+   slug: "{{year}}-{{month}}-{{day}}-{{titulo}}"
+   format: "json"
+   extension: "json"
+   fields:
+    - {label: "Titulo", name: "titulo", widget: "string"}
+    - {label: "Texto", name: "texto", widget: "markdown"}
