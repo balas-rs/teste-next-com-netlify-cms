@@ -3,22 +3,34 @@ import Image from 'next/image'
 import { useState } from 'react';
 import Markdown from 'react-markdown'
 import styles from '../styles/Home.module.css'
-//import postData from "../public/posts/2021-08-18-map-projectname-projeto-teste-2-texto-texto-de-teste-n-nto-aparecendo-na-tela-se-sim-deu-certoooo.json"
+import { handleJSONfiles } from '../postsHandler';
+export async function getStaticProps() {
 
-/*
-<h2>{postData.projectname}</h2>
-      <Markdown children={postData.texto} />
-*/
+  const posts = handleJSONfiles()
 
-export default function Home() {
+  return {
+    props: {posts}, // will be passed to the page component as props
+  }
+}
+
+
+export default function Home(props) {
 
   const [ post, setPost ] = useState({})
 
 
   return (
     <div>
-      <h1>Posts</h1>
-      
+      <h1>Empreendimentos</h1>
+      {props.posts.map(post => {
+        return(
+          <div>
+            <h2>{post.titulo}</h2>
+            <Markdown children={post.texto} />
+          </div>
+        )
+      })}
     </div>
   )
 }
+
