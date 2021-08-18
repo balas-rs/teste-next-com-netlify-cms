@@ -17,10 +17,8 @@ export async function getStaticProps() {
 
 
 
-export default function Home({ posts }) {
+export default function Home(props) {
 
-
-  console.log(posts)
   return (
     <div>
       <h1>Empreendimentos</h1>
