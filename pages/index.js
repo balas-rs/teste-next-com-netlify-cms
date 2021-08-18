@@ -24,7 +24,7 @@ export default function Home(props) {
       <h1>Empreendimentos</h1>
       {props.posts.map(post => {
         return(
-          <div>
+          <div key={post.titulo}>
             <h2>{post.titulo}</h2>
             <Markdown children={post.texto} />
           </div>
