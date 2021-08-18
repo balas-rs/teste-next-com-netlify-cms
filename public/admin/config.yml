@@ -22,8 +22,6 @@ collections:
    folder: "/public/posts/empreendimentos"
    create: true
    slug: "{{year}}-{{month}}-{{day}}-{{titulo}}"
-   format: "json"
-   extension: "json"
    fields:
     - {label: "Titulo", name: "titulo", widget: "string"}
     - {label: "Texto", name: "texto", widget: "markdown"}
