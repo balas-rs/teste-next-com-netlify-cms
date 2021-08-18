@@ -26,7 +26,7 @@ export default function Home(props) {
         return(
           <div key={post.titulo}>
             <h2>{post.titulo}</h2>
-            <Markdown children={post.texto} />
+            <Markdown>{post.texto}</Markdown>
           </div>
         )
       })}
