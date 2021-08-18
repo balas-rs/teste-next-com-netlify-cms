@@ -13,6 +13,8 @@ collections:
    label: "Projetos"
    folder: "/public/posts/projetos"
    create: true
+   format: "json"
+   extension: "json"
    slug: "{{year}}-{{month}}-{{day}}-{{titulo}}"
    fields:
     - {label: "Titulo", name: "titulo", widget: "string"}
@@ -21,6 +23,8 @@ collections:
    label: "Empreendimentos"
    folder: "/public/posts/empreendimentos"
    create: true
+   format: "json"
+   extension: "json"
    slug: "{{year}}-{{month}}-{{day}}-{{titulo}}"
    fields:
     - {label: "Titulo", name: "titulo", widget: "string"}
