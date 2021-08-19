@@ -1,0 +1,31 @@
+backend:
+  name: git-gateway
+  branch: main # Branch to update (optional; defaults to master)
+
+# This line should *not* be indented
+publish_mode: editorial_workflow
+
+# This line should *not* be indented
+media_folder: "/public/images" # Media files will be stored in the repo under images
+
+collections:
+ - name: "projetos"
+   label: "Projetos"
+   folder: "/public/posts/projetos"
+   create: true
+   format: "json"
+   extension: "json"
+   slug: "{{year}}-{{month}}-{{day}}-{{titulo}}"
+   fields:
+    - {label: "Titulo", name: "titulo", widget: "string"}
+    - {label: "Texto", name: "texto", widget: "markdown"}
+ - name: "empreendimentos"
+   label: "Empreendimentos"
+   folder: "/public/posts/empreendimentos"
+   create: true
+   format: "json"
+   extension: "json"
+   slug: "{{year}}-{{month}}-{{day}}-{{titulo}}"
+   fields:
+    - {label: "Titulo", name: "titulo", widget: "string"}
+    - {label: "Texto", name: "texto", widget: "markdown"}
