@@ -4,6 +4,7 @@ import { useState, useEffect, Fragment } from 'react';
 import Markdown from 'react-markdown'
 import styles from '../styles/Home.module.css'
 import { handleJSONfiles } from '../postsHandler';
+import Script from 'next/script'
 
 
 export async function getStaticProps() {
@@ -35,13 +36,7 @@ export default function Home(props) {
 
   return (
     <div>
-      <Fragment>
-        <Head>
-          <title>Teste Netlify SOS</title>
-          <meta charSet="utf-8" />
-          <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-        </Head>
-      </Fragment>
+      <Script src="https://identity.netlify.com/v1/netlify-identity-widget.js" />
       <h1>Empreendimentos</h1>
       {props.posts.map(post => {
         return(
