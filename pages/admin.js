@@ -1,6 +1,6 @@
 import dynamic from 'next/dynamic'
+import config from "../cms/config"
 
-const CMS_CONFIG = {}
 const Loading = () => (
   <div className="min-h-screen flex items-center justify-center">
     <p className="text-gray-500 font-semibold text-xl">Loading...</p>
@@ -10,7 +10,7 @@ const Loading = () => (
 const CMS = dynamic(
   () =>
     import('netlify-cms-app').then((CMS) => {
-      CMS.init({ CMS_CONFIG })
+      CMS.init({ config })
     }),
   { ssr: false, loading: Loading }
 )
